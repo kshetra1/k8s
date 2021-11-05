@@ -8,4 +8,5 @@ spec: ##we tell k8s api manager what has to be done
     image: nginx
     ports:
     - containerPort: 80
+    - nodePort: 8080  
         ## first 4 lines are just information 
