@@ -1,12 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: simple
+  name: simple-pod
+  labels:
+    env: test
+    app: nginx
 spec: ##we tell k8s api manager what has to be done
   containers:
   - name: nginx
     image: nginx
     ports:
     - containerPort: 80
-    - nodePort: 8080  
+      #- nodePort: 8080  
         ## first 4 lines are just information 
